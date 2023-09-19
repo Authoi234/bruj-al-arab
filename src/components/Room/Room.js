@@ -1,6 +1,7 @@
 import React from 'react';
 import { Badge, Button, Card, Col } from 'react-bootstrap';
 import { FaBed } from "react-icons/fa";
+import { ImManWoman } from "react-icons/im";
 
 const Room = ({ room }) => {
     console.log(room);
@@ -14,10 +15,10 @@ const Room = ({ room }) => {
                         <Card.Title className='fs-3'>{room.title}</Card.Title>
                         <Card.Text className='h5'>{room.description}</Card.Text>
                     </Card.Body>
-                    <Card.Body className='d-flex'>
-                        <h3 className='px-2'><FaBed></FaBed>:{room.bed}</h3>
-                        <h3 className='px-2'>:{room.people}</h3>
-                        <h3 className='px-2'>:{room.price}</h3>
+                    <Card.Body className='d-flex align-items-center'>
+                        <h3 className='px-1'><FaBed></FaBed>:{room.bed}</h3>
+                        <h3 className='px-3'><ImManWoman></ImManWoman>:{room.people}</h3>
+                        <h3 className='px-1'>$:{room.price}</h3>
                         <Button variant="outline-primary">Book</Button>
                     </Card.Body>
                 </Card>
